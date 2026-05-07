@@ -1,20 +1,20 @@
 {
   "name": "diffgram-local",
-  "description": "Diffgram 标注系统 本地开发版 (localhost:8085) 的 AI 数据治理助手: 10 个 skill + Bearer token 认证的 MCP connector。仅 diffgram 主仓库贡献者用 (跑 docker-compose up 时本机连)。",
-  "version": "0.1.0",
+  "description": "Diffgram 标注系统 本地开发版 (localhost:18085) 的 AI 数据治理助手: 10 个 skill + Bearer token 认证的 MCP connector。仅 diffgram 主仓库贡献者用 (跑 docker-compose up 时本机连)。",
+  "version": "0.1.1",
   "author": {
     "name": "Bestfunc Technology",
     "email": "Great@bestfunc.com"
   },
-  "homepage": "http://localhost:8085",
+  "homepage": "http://localhost:18085",
   "repository": "https://github.com/bestfunc/diffgram_plugin",
   "license": "Apache-2.0",
   "keywords": ["diffgram", "mcp", "annotation", "data-labeling", "audio-labeling", "local-dev"],
   "mcpServers": {
     "diffgram": {
       "type": "http",
-      "url": "http://localhost:8085/api/v1/mcp",
-      "httpUrl": "http://localhost:8085/api/v1/mcp"
+      "url": "http://localhost:18085/api/v1/mcp",
+      "httpUrl": "http://localhost:18085/api/v1/mcp"
     }
   }
 }

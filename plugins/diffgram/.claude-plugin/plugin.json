@@ -1,20 +1,20 @@
 {
   "name": "diffgram",
-  "description": "Diffgram 标注系统 SaaS 版 (diffgram.bestfunc.com) 的 AI 数据治理助手: 10 个 skill + Bearer token 认证的 MCP connector。让 Claude / Codex / Qwen CLI 帮你跨项目查询、按规则批量打标、组织数据集、创建标注任务。当前 SaaS 未开放, 此 plugin 为占位。",
-  "version": "0.1.0",
+  "description": "Diffgram 标注系统 SaaS 版 (label.bestfunc.com) 的 AI 数据治理助手: 10 个 skill + Bearer token 认证的 MCP connector。让 Claude / Codex / Qwen CLI 帮你跨项目查询、按规则批量打标、组织数据集、创建标注任务。当前 SaaS 未开放, 此 plugin 为占位。",
+  "version": "0.1.1",
   "author": {
     "name": "Bestfunc Technology",
     "email": "Great@bestfunc.com"
   },
-  "homepage": "https://diffgram.bestfunc.com",
+  "homepage": "https://label.bestfunc.com",
   "repository": "https://github.com/bestfunc/diffgram_plugin",
   "license": "Apache-2.0",
   "keywords": ["diffgram", "mcp", "annotation", "data-labeling", "audio-labeling", "saas"],
   "mcpServers": {
     "diffgram": {
       "type": "http",
-      "url": "https://diffgram.bestfunc.com/api/v1/mcp",
-      "httpUrl": "https://diffgram.bestfunc.com/api/v1/mcp"
+      "url": "https://label.bestfunc.com/api/v1/mcp",
+      "httpUrl": "https://label.bestfunc.com/api/v1/mcp"
     }
   }
 }
