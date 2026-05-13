@@ -1,7 +1,7 @@
 {
   "name": "diffgram-onprem",
-  "description": "Diffgram 标注系统 公司私有化版 (默认 192.168.2.176:18085) 的 AI 数据治理助手: 10 个 skill + Bearer token 认证的 MCP connector。让 Claude / Codex / Qwen CLI 帮你跨项目查询、按规则批量打标、组织数据集、创建标注任务。其他公司的私有化部署 IP/端口不同时, 安装后到 plugin.json 改 url 即可 (见 README · 私有化定制段)。",
-  "version": "0.1.1",
+  "description": "Diffgram 标注系统 公司私有化版 (默认 192.168.2.176:18085) 的 AI 数据治理助手: 10 个 skill + OAuth 2.1 一键授权 MCP connector。让 Claude / Codex / Qwen CLI 帮你跨项目查询、按规则批量打标、组织数据集、创建标注任务。其他公司的私有化部署 IP/端口不同时, 安装后到 plugin.json 改 url 即可 (见 README · 私有化定制段)。",
+  "version": "0.2.0",
   "author": {
     "name": "Bestfunc Technology",
     "email": "Great@bestfunc.com"

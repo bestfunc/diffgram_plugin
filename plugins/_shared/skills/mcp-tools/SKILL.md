@@ -9,6 +9,8 @@ user-invocable: false
 
 按 scope (module) 分组. **read** 只读, **write** 涉及 dry_run + confirm 二次确认.
 
+> **v0.2+ 认证**: 走 OAuth 2.1, 用户一次浏览器授权即拿到全权 (单 scope `mcp`), 可调下面**所有** tool. 下表 scope: `query/mark/move/...` 仅作模块分类 + 旧 API Key (dgk-xxx) 模式按字段细粒度校验时用. 项目级写权限仍由 diffgram `Project_permissions` 兜底校验 (admin / Editor).
+
 ## query 模块 (跨项目, 只读, scope: `query`)
 
 | tool | input | output |
@@ -109,8 +111,8 @@ user-invocable: false
 
 | code | 含义 | 处理 |
 |---|---|---|
-| 401 | Bearer token 无效 / 过期 / 吊销 | 用户重新生成 token |
-| 403 | scope 不足 / 无项目权限 | 检查 token scopes / 项目 role |
+| 401 | Bearer token 无效 / 过期 / 吊销 | OAuth 模式 → Claude Code 自动刷新 access (用 refresh_token); refresh 也过期 → 自动重启 OAuth dance (用户偶尔点一次"允许"). 旧 API Key 模式 → 用户在 web UI 重新生成 dgk-xxx |
+| 403 | scope 不足 / 无项目权限 | OAuth 模式 token 含 `mcp` 全权, 403 通常是项目 role 不够 (该项目不是 admin/Editor) → 让用户在 diffgram web UI 加 role. 旧 API Key 模式可能是 scopes 缺某项 → 用户重新创建 token 选齐 scope |
 | 404 | project / file / wd 不存在 | 用 `query_projects` 重新对名 |
 | 409 | request_id 过期或已用 | 重跑 dry_run |
 | 422 | filter 语法错误 | 看 `query-syntax` skill |

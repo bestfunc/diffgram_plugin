@@ -6,23 +6,23 @@
   },
   "metadata": {
     "description": "Diffgram 标注系统的 Claude Code plugin 市场。提供 SaaS / 公司私有化 / 本地开发 三种部署的 plugin 变体, 让 AI 工程师在 IDE 里跨项目查询数据 / 复合规则批量打标 / 组织数据集 / 创建标注任务, 不离开 Claude Code 完成完整数据治理流程。",
-    "version": "0.1.1"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "diffgram",
       "source": "./plugins/diffgram",
-      "description": "【SaaS 版预留】label.bestfunc.com — 当前未开放, 占位待用。10 个 AI skill + Bearer token 认证 MCP connector。"
+      "description": "【SaaS 版预留】label.bestfunc.com — 当前未开放, 占位待用。10 个 AI skill + OAuth 2.1 一键授权 MCP connector。"
     },
     {
       "name": "diffgram-onprem",
       "source": "./plugins/diffgram-onprem",
-      "description": "【公司私有化版】192.168.2.176:18085 (本司内网部署) — 公司内 AI 工程师 / 标注员日常用。其他公司私有化部署 IP/端口不同时, 装完到 plugin.json 改 url (见 README · 私有化定制段)。10 个 AI skill + Bearer token 认证 MCP connector。"
+      "description": "【公司私有化版】192.168.2.176:18085 (本司内网部署) — 公司内 AI 工程师 / 标注员日常用。其他公司私有化部署 IP/端口不同时, 装完到 plugin.json 改 url (见 README · 私有化定制段)。10 个 AI skill + OAuth 2.1 一键授权 MCP connector。"
     },
     {
       "name": "diffgram-local",
       "source": "./plugins/diffgram-local",
-      "description": "【本地开发版】localhost:18085 — 跑 docker-compose up 时连本机 diffgram dev。仅给 diffgram 主仓库贡献者用。10 个 AI skill + Bearer token 认证 MCP connector。"
+      "description": "【本地开发版】localhost:18085 — 跑 docker-compose up 时连本机 diffgram dev。仅给 diffgram 主仓库贡献者用。10 个 AI skill + OAuth 2.1 一键授权 MCP connector。"
     }
   ]
 }

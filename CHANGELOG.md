@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.2.0 (2026-05-13) — OAuth 2.1 一键授权
+
+### 新增
+- **OAuth 2.1 + PKCE + RFC 7591 动态客户端注册** — Claude Code 装完 plugin 后浏览器一键授权, 不再手动复制 token. 见 README "首次使用 — 浏览器一键授权" 段
+- 后端配套实现: `/.well-known/oauth-protected-resource` + `/.well-known/oauth-authorization-server` + `/oauth/register` + `/oauth/authorize` + `/oauth/token` + `/oauth/revoke`
+- 前端配套实现: 授权确认页 `/mcp/oauth/authorize` (Vue SPA)
+- access_token TTL 1h, refresh_token TTL 30d (自动续期)
+
+### 改
+- README 主流程改成 OAuth, 旧 API Key 模式移到"兼容"段
+- 不再需要在 plugin.json 写 `headers.Authorization`, 安装后即用
+
+### 兼容
+- 旧 `dgk-xxx` API Key 继续可用, 后端 token 鉴权统一入口透明处理两种 kind
+- plugin.json 字段未变, 升级 plugin 后无需重装
+
 ## 0.1.1 (2026-05-07) — 地址修正 + 私有化文档
 
 ### 改

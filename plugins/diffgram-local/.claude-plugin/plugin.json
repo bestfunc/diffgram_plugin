@@ -1,7 +1,7 @@
 {
   "name": "diffgram-local",
-  "description": "Diffgram 标注系统 本地开发版 (localhost:18085) 的 AI 数据治理助手: 10 个 skill + Bearer token 认证的 MCP connector。仅 diffgram 主仓库贡献者用 (跑 docker-compose up 时本机连)。",
-  "version": "0.1.1",
+  "description": "Diffgram 标注系统 本地开发版 (localhost:18085) 的 AI 数据治理助手: 10 个 skill + OAuth 2.1 一键授权 MCP connector。仅 diffgram 主仓库贡献者用 (跑 docker-compose up 时本机连)。",
+  "version": "0.2.0",
   "author": {
     "name": "Bestfunc Technology",
     "email": "Great@bestfunc.com"
